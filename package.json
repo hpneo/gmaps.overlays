@@ -1,7 +1,7 @@
 {
   "name": "gmaps.overlays",
   "version": "0.5.0",
-  "description": "gmaps.js module to draw lines and polygons",
+  "description": "gmaps.js module to draw custom overlays",
   "main": "gmaps.overlays.js",
   "scripts": {
     "test": "gulp test"
