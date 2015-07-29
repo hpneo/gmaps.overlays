@@ -1,0 +1,40 @@
+{
+  "name": "gmaps.overlays",
+  "version": "0.5.0",
+  "description": "gmaps.js module to draw lines and polygons",
+  "main": "gmaps.overlays.js",
+  "scripts": {
+    "test": "gulp test"
+  },
+  "keywords": [
+    "gmaps",
+    "google",
+    "maps",
+    "browser"
+  ],
+  "author": "Gustavo Leon <gustavo.leon@outlook.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/hpneo/gmaps.overlays",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hpneo/gmaps.overlays.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hpneo/gmaps.overlays/issues"
+  },
+  "dependencies": {
+    "lodash-compat": "^3.8.0"
+  },
+  "devDependencies": {
+    "browserify": "^10.1.0",
+    "gulp": "^3.8.11",
+    "gulp-jasmine-phantom": "^1.1.3",
+    "gulp-jscs": "^1.6.0",
+    "gulp-jshint": "^1.10.0",
+    "gulp-mocha-phantomjs": "^0.8.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^1.2.0",
+    "mocha": "^2.2.4",
+    "vinyl-source-stream": "^1.1.0"
+  }
+}
