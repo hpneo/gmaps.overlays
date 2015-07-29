@@ -67,7 +67,7 @@ The `options` object should contain:
 * `lat` (number): The latitude of the position of the overlay in the map.
 * `lng` (number): The longitude of the position of the overlay in the map.
 * `autoShow` (boolean): Define if the overlay will be visible at the moment of being added to the map (by default is `true`).
-* `layer` (string): The layer when the overlay will be added. There are 8 layers in Google Maps, which are stacked.
+* `layer` (string): The layer when the overlay will be added. There are 8 layers in Google Maps, which are stacked (See _Layers_ section).
 * `content` (string or HTML element): The overlay's content. It can be text, HTML string or HTML element.
 * `click` (function): A callback called every time the overlay is clicked. If this callback is setted, the overlay will be placed in the `overlayMouseTarget` layer.
 * `verticalAlign` (string): The overlay's vertical position according the coordinate in the map (defined by `lat` and `lng`). It can be `top`, `bottom` or `middle` (by default).
@@ -96,6 +96,23 @@ The following methods trigger custom events. You need to add the `gmaps.events` 
 | `drawOverlay` | `overlay_added` |
 | `removeOverlay` | `overlay_removed` |
 | `removeOverlays` | `overlay_removed` |
+
+---
+
+### Layers
+
+The following layers are available, and are enumerated in the order in which they are stacked from bottom to top:
+
+| Layer | Order |
+| ------ | ----- |
+| `mapPane` | 0 |
+| `overlayLayer` | 1 |
+| `overlayShadow` | 2 |
+| `markerLayer` | 3 |
+| `overlayImage` | 4 |
+| `floatShadow` | 5 |
+| `overlayMouseTarget` | 6 |
+| `floatPane` | 7 |
 
 ## Changelog
 
