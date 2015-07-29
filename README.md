@@ -103,16 +103,20 @@ The following methods trigger custom events. You need to add the `gmaps.events` 
 
 The following layers are available, and are enumerated in the order in which they are stacked from bottom to top:
 
-| Layer | Order |
-| ------ | ----- |
-| `mapPane` | 0 |
-| `overlayLayer` | 1 |
-| `overlayShadow` | 2 |
-| `markerLayer` | 3 |
-| `overlayImage` | 4 |
-| `floatShadow` | 5 |
-| `overlayMouseTarget` | 6 |
-| `floatPane` | 7 |
+| Layer | Description | Order |
+| ------ | ----- | ----- |
+| `mapPane` | The lowest pane and is above the tiles. It may not receive DOM events | 0 |
+| `overlayLayer` | Contains polylines, polygons, ground overlays and tile layer overlays. It may not receive DOM events | 1 |
+| `overlayShadow` | Contains the marker shadows. It may not receive DOM events | 2 |
+| `markerLayer` | Contains markers. It may not receive DOM events | 3 |
+| `overlayImage` | Contains the marker foreground images | 4 |
+| `floatShadow` | Contains the info window shadow. It is above the overlayImage, so that markers can be in the shadow of the info window | 5 |
+| `overlayMouseTarget` | Contains elements that receive DOM mouse events, such as the transparent targets for markers. It is above the `floatShadow`, so that markers in the shadow of the info window can be clickable | 6 |
+| `floatPane` | Contains the info window. It is above all map overlays | 7 |
+
+#### Note about Layers
+
+The [reference](https://developers.google.com/maps/documentation/javascript/3.exp/reference#MapPanes) indicates 5 layers, but the [Custom Overlays guide](https://developers.google.com/maps/documentation/javascript/customoverlays#initialize) describes 7 layers. Although all the listed layers are present in the code, it seems to be that `markerLayer` has been splitted in 2 layers: `overlayShadow` and `overlayImage`.
 
 ## Changelog
 
